@@ -24,11 +24,16 @@ namespace RedisTest.API.Controllers
         }
 
         [HttpGet()]
-        public async Task<IActionResult> getPreferences([FromQuery] string username)
+        public async Task<IActionResult> getPreferences()
         {
+            string username = "fatih";
             var preferenceBytes=await _distributedCache.GetAsync(username);
-            var preferences = Preferences.ToPreferences(preferenceBytes);
-            return Ok(preferences);
+            if (preferenceBytes is not null)
+            {
+                var preferences = Preferences.ToPreferences(preferenceBytes);
+                return Ok(preferences);
+            }
+            return Ok("Bulunamadı");
         }
 
         [HttpPost]
