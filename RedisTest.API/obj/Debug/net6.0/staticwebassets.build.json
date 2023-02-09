@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "i/u/hqldNXqXmeqcJ6YJCSKyEbWcJDJJWmAHGTe+G9w=",
+  "Source": "RedisTest.API",
+  "BasePath": "_content/RedisTest.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
